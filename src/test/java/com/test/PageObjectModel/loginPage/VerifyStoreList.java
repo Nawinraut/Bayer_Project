@@ -37,14 +37,16 @@ public class VerifyStoreList extends TestBase {
 		Object[][] readExcel = readfile.readExcel();
 		for (int i = 0; i < readExcel.length; i++) {
 			String storeName = readExcel[i][0].toString();
-			// String storeAddress = readExcel[i][1].toString();
+			String storeAddress = readExcel[i][1].toString();
 			String zipCode = readExcel[i][4].toString();
 			// System.out.println(storeName);
 			List<String> listOfStoreName = loginpage.verifyStoreName(zipCode);
 			System.out.println("Total count of stores " + listOfStoreName.size());
 			int flag = 0;
 			for (String store : listOfStoreName) {
-				if (store.equalsIgnoreCase(storeName)) {
+				if (store.equalsIgnoreCase(storeName+storeAddress)) {
+					System.out.println(store);
+					System.out.println(storeName+storeAddress);
 					log.info(storeName + "          ||is availabe for the Zip code||          " + zipCode);
 					readfile.writeExcel(i + 1, 7, "Available");
 					flag = 1;

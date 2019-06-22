@@ -20,13 +20,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  */
 
 public class ExcelReader {
-	// String path =
-	// "C:\\Users\\nawkumar\\workspace\\ICJ\\TestData\\Kiosk_location
-	// s_CA.xlsx";
-	// String sheetName = "Drscholls Store ";
+	 String path ="C:\\Users\\nawkumar\\workspace\\ICJ\\TestData\\Kiosk_locations_CA.xlsx";
+	 String sheetName ="Drscholls Store     ";
 
-	String path = "C:\\Users\\nawkumar\\workspace\\ICJ\\TestData\\kiosk_removal.xlsx";
-	String sheetName = "Remove";
+	/*String path = "C:\\Users\\nawkumar\\workspace\\ICJ\\TestData\\kiosk_removal.xlsx";
+	String sheetName = "Remove";*/
 	Workbook workbook = null;
 	public Cell cell = null;
 

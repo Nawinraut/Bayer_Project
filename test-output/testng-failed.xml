@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.test.PageObjectModel.ICJ.uiActions.WriteExcel">
+      <class name="com.test.PageObjectModel.loginPage.VerifyStoreList">
         <methods>
-          <include name="setCellData"/>
+          <include name="verifyStoreName"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.test.PageObjectModel.ICJ.uiActions.WriteExcel -->
+      </class> <!-- com.test.PageObjectModel.loginPage.VerifyStoreList -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

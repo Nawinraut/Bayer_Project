@@ -49,10 +49,14 @@ public class LoginPage extends TestBase {
 		List<String> storename = new ArrayList<String>();
 		List<WebElement> list = storeDrive.findElements(By.xpath("//h3"));
 		// System.out.println(list.size());
+		int j=0;
 		for (WebElement li : list) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].scrollIntoView();", li);
-			storename.add(li.getText());
+			String text = driver.findElement(By.xpath("//div[@id='store-"+j+"']//p[1]")).getText();
+			String[] text1 = text.split("\\r?\\n");
+			storename.add(li.getText()+text1[0]);
+			j++;
 		}
 		return storename;
 

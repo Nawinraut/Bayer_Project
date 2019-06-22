@@ -46,7 +46,7 @@ public class FindStore {
 		driver.findElement(By.id("locator-zip")).sendKeys(Keys.ENTER);;
 		//driver.switchTo().frame("cfoiframe");
 	   WebElement storeDrive = driver.findElement(By.id("stores-list"));
-		List<String> storename=new ArrayList<String>();
+	   List<String> storename=new ArrayList<String>();
 	   List<WebElement> store = storeDrive.findElements(By.xpath("//h3"));	
 	   //List<WebElement> address1 = driver.findElements(By.xpath("//div[@id='stores-list']//p[1]"));
 		System.out.println(store.size());
@@ -64,7 +64,7 @@ public class FindStore {
 		    j++;
 		    System.out.println(li.getText()+text1[0]);
 			}
-				//System.out.println("*********************************************");
+				System.out.println("*********************************************");
 				//storename.add(li.getText()+adrs.getText());	
 		}
 		
